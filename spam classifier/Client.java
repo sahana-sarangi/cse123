@@ -4,13 +4,13 @@ import java.io.*;
 
 // Client class for interaction with Classifiers
 public class Client {
-    public static final String TRAIN_FILE = "data/emails/train.csv"; 
-    public static final String TEST_FILE = "data/emails/test.csv";      
-    public static final int LABEL_INDEX = 0; 
+    public static final String TRAIN_FILE = "data/songs/train.csv"; 
+    public static final String TEST_FILE = "data/songs/test.csv";      
+    public static final int LABEL_INDEX = 9; 
     // Very strange thing we're doing here - we're storing a method as a variable!
     // You should not do this in your homework as it's a forbidden feature, but if you're
     // interested in how this works, look up 'functional programming'!                
-    public static final Function<List<String>, Classifiable> CONVERTER = Email::toClassifiable;
+    public static final Function<List<String>, Classifiable> CONVERTER = Song::toClassifiable;
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner console = new Scanner(System.in);
